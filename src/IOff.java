@@ -5,6 +5,5 @@ public class IOff implements State {
     public void click(CeilingFan fan)
     {
         fan.set_state(new ILow());
-        System.out.println("Turning to low speed");
     }
 }

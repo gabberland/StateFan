@@ -5,6 +5,5 @@ public class IMedium implements State {
     public void click(CeilingFan fan)
     {
         fan.set_state(new IHigh());
-        System.out.println("Turnning to the highest speed");
     }
 }
