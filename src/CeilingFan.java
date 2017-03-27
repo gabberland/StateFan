@@ -16,5 +16,8 @@ public class CeilingFan {
     {
         current_state.click(this);
     }
+    public String getState() {
+        return current_state.getName();
+    }
 }
 

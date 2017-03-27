@@ -12,7 +12,7 @@ public class main {
         /*
         while (true)
         {
-            System.out.println("Press x to toggle the mode");
+            System.out.println(Press" x to toggle the mode");
             Scanner scanner = new Scanner(System.in);
             if (scanner.nextLine().equals("x"))
                 button.click();

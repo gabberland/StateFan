@@ -6,4 +6,9 @@ public class IHigh implements  State{
     {
         fan.set_state(new IOff());
     }
+
+    @Override
+    public String getName() {
+        return "High Level";
+    }
 }

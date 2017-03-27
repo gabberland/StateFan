@@ -6,4 +6,9 @@ public class IOff implements State {
     {
         fan.set_state(new ILow());
     }
+
+    @Override
+    public String getName() {
+        return "Turned OFF";
+    }
 }

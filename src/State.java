@@ -3,4 +3,5 @@
  */
 public interface State {
     void click(CeilingFan fan);
+    String getName();
 }

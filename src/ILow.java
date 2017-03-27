@@ -6,4 +6,10 @@ public class ILow implements State {
     {
         fan.set_state(new IMedium());
     }
+
+    @Override
+    public String getName() {
+        return "Low Level";
+    }
+
 }

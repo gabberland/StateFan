@@ -6,4 +6,8 @@ public class IMedium implements State {
     {
         fan.set_state(new IHigh());
     }
+    @Override
+    public String getName() {
+        return "Medium Level";
+    }
 }

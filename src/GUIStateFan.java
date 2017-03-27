@@ -12,9 +12,9 @@ public class GUIStateFan {
     private JTextField textField1;
     private JButton LowState;
     private JButton MediumState;
-    private JButton HighState;
+    private JButton TurnOn;
     private JButton OffState;
-    private JTextField clickTheButtonsToTextField;
+    private JTextField clickTheButtonToTextField;
     CeilingFan button = new CeilingFan();
     String stateText;
     int state = 0; //turned off
@@ -24,37 +24,11 @@ public class GUIStateFan {
     IHigh high = new IHigh();
 
     public GUIStateFan() {
-        LowState.addMouseListener(new MouseAdapter() {
+        TurnOn.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                button.set_state(low);
-                stateText = "Fan turned to LOW state";
-
-            }
-        });
-        MediumState.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                button.set_state(med);
-                stateText = "Fan turned to MEDIUM state";
-            }
-        });
-        HighState.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                button.set_state(high);
-                stateText = "Fan turned to HIGH state";
-            }
-        });
-        OffState.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
-                button.set_state(off);
-                stateText = "Fan turned OFF";
+                button.click();
             }
         });
     }
@@ -69,8 +43,7 @@ public class GUIStateFan {
 
         while (true) {
 
-            button.click();
-            textField1.setText(stateText);
+            textField1.setText(String.valueOf(button.getState()));
 
         }
     }
