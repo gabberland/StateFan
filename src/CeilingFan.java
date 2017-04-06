@@ -2,22 +2,26 @@
  * Created by Oriol on 22/03/2017.
  */
 public class CeilingFan {
-    private State current_state;
 
-    public CeilingFan()
-    {
-        current_state = new IOff();
+    private State currentState;
+
+    public CeilingFan() {
+        currentState = new Off();
     }
-    public void set_state(State s)
-    {
-        current_state = s;
+
+    public void pullGreen() {
+        setCurrentState(currentState.nextState());
+        currentState.printState();
+
     }
-    public void click()
-    {
-        current_state.click(this);
+
+    public void pullRed() {
+        setCurrentState(currentState.previousState());
+        currentState.printState();
     }
-    public String getState() {
-        return current_state.getName();
+
+    public void setCurrentState(State currentState) {
+        this.currentState = currentState;
     }
 }
 

@@ -18,10 +18,10 @@ public class GUIStateFan {
     CeilingFan button = new CeilingFan();
     String stateText;
     int state = 0; //turned off
-    IOff off = new IOff();
-    ILow low = new ILow();
-    IMedium med = new IMedium();
-    IHigh high = new IHigh();
+    Off off = new Off();
+    LowSpeed low = new LowSpeed();
+    MediumSpeed med = new MediumSpeed();
+    HighSpeed high = new HighSpeed();
 
     public GUIStateFan() {
         TurnOn.addMouseListener(new MouseAdapter() {
