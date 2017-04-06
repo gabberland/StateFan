@@ -15,6 +15,7 @@ public class GUIStateFan {
     private JButton TurnOn;
     private JButton OffState;
     private JTextField clickTheButtonToTextField;
+    private JButton previousFanStateButton;
     CeilingFan button = new CeilingFan();
     String stateText;
     int state = 0; //turned off
@@ -28,7 +29,14 @@ public class GUIStateFan {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                button.click();
+                button.pullNext();
+            }
+        });
+        previousFanStateButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                button.pullPrevious();
             }
         });
     }
@@ -43,7 +51,7 @@ public class GUIStateFan {
 
         while (true) {
 
-            textField1.setText(String.valueOf(button.getState()));
+            textField1.setText(String.valueOf(button.getCurrentState()));
 
         }
     }

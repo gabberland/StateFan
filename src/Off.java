@@ -16,4 +16,5 @@ public class Off implements State {
     public State previousState() {
         return new HighSpeed();
     }
+
 }
