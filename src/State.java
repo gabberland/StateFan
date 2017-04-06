@@ -2,7 +2,7 @@
  * Created by Oriol on 22/03/2017.
  */
 public interface State {
-    void printState();
+    String printState();
     State nextState();
     State previousState();
 }

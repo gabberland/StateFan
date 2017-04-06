@@ -3,8 +3,8 @@
  */
 public class MediumSpeed implements State {
     @Override
-    public void printState() {
-        System.out.println(" medium speed ");
+    public String printState() {
+        return " medium speed ";
     }
 
     @Override

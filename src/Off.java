@@ -3,8 +3,8 @@
  */
 public class Off implements State {
     @Override
-    public void printState() {
-        System.out.println(" fan is off ");
+    public String printState() {
+        return" fan is off ";
     }
 
     @Override

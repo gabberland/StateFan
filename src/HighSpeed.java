@@ -3,8 +3,8 @@
  */
 public class HighSpeed implements  State{
     @Override
-    public void printState(){
-        System.out.println(" high speed ");
+    public String printState(){
+        return" high speed ";
     }
     @Override
     public State nextState() {

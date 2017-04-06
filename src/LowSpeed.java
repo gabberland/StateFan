@@ -3,8 +3,8 @@
  */
 public class LowSpeed implements State {
     @Override
-    public void printState() {
-        System.out.println(" low speed ");
+    public String printState() {
+        return" low speed ";
     }
 
     @Override
