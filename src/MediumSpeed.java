@@ -1,19 +1,19 @@
 /**
  * Created by Oriol on 22/03/2017.
  */
-public class MediumSpeed implements State {
+public class MediumSpeed implements IState {
     @Override
     public String printState() {
         return " medium speed ";
     }
 
     @Override
-    public State nextState() {
+    public IState nextState() {
         return new HighSpeed();
     }
 
     @Override
-    public State previousState() {
+    public IState previousState() {
         return new LowSpeed();
     }
 }

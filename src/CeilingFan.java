@@ -3,29 +3,29 @@
  */
 public class CeilingFan {
 
-    private State currentState;
+    private IState currentIState;
 
     public CeilingFan() {
-        currentState = new Off();
+        currentIState = new Off();
     }
 
     public String pullNext() {
-        setCurrentState(currentState.nextState());
-        return currentState.printState();
+        setCurrentIState(currentIState.nextState());
+        return currentIState.printState();
 
     }
 
     public void pullPrevious() {
-        setCurrentState(currentState.previousState());
-        currentState.printState();
+        setCurrentIState(currentIState.previousState());
+        currentIState.printState();
     }
 
-    public void setCurrentState(State currentState) {
-        this.currentState = currentState;
+    public void setCurrentIState(IState currentIState) {
+        this.currentIState = currentIState;
     }
 
-    public String getCurrentState() {
-        return currentState.printState();
+    public String getCurrentIState() {
+        return currentIState.printState();
     }
 }
 

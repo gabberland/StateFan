@@ -51,7 +51,7 @@ public class GUIStateFan {
 
         while (true) {
 
-            textField1.setText(String.valueOf(button.getCurrentState()));
+            textField1.setText(String.valueOf(button.getCurrentIState()));
 
         }
     }

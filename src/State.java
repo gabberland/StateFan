@@ -1,8 +1,0 @@
-/**
- * Created by Oriol on 22/03/2017.
- */
-public interface State {
-    String printState();
-    State nextState();
-    State previousState();
-}
